@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-
+  FUSIONAUTH_VERSION: 1.32.1
 
 jobs:
 
@@ -21,6 +21,9 @@ jobs:
 
 
     steps:
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
     
     - uses: actions/checkout@v3
     - name: MATest
@@ -47,6 +50,9 @@ jobs:
       uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
       with:
         context: .
+        build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
+          # linux/amd64,linux/arm/v7,
+        platforms: linux/arm64
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
