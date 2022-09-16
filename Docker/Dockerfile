@@ -1,5 +1,5 @@
 FROM node
-COPY ../maserver /maserver
+COPY /maserver /maserver
 RUN apk update &&\
     apk upgrade &&\
     apk add --no-cache bash &&\
