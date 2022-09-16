@@ -21,12 +21,14 @@ jobs:
 
 
     steps:
+    
+    with:
+      platforms: linux/arm64
+    
     - uses: actions/checkout@v3
     - name: MATest
       #build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           # linux/amd64,linux/arm/v7,
-      with:
-        platforms: linux/arm64
       working-directory: 
       run: docker build . --build-arg ARCH=arm64v8/ --file Dockerfile --tag matest01:$(date +%s)
       
