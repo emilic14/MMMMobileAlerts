@@ -1,5 +1,4 @@
-ARG ARCH=
-FROM ${ARCH}debian:buster-slim
+FROM node
 COPY /maserver /maserver
 WORKDIR /maserver
 RUN npm install
