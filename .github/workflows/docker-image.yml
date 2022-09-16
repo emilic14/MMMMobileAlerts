@@ -30,7 +30,7 @@ jobs:
       #build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           # linux/amd64,linux/arm/v7,
       working-directory: 
-      run: docker build . --build-arg ARCH=arm64v8/ --file Dockerfile --tag matest01:$(date +%s)
+      run: docker build . --file Dockerfile --tag matest01:$(date +%s)
       
       
     - name: Log in to the Container registry
