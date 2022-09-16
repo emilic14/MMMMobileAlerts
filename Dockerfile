@@ -1,4 +1,4 @@
-FROM node
+FROM arm64v8/node
 COPY /maserver /maserver
 WORKDIR /maserver
 RUN npm install
