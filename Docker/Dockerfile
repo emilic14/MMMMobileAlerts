@@ -1,6 +1,6 @@
 FROM node
 COPY /maserver /maserver
-RUN npm install /maserver
-ENTRYPOINT node /maserver/mobilealerts.js
 WORKDIR /maserver
+RUN npm install
+ENTRYPOINT node /maserver/mobilealerts.js
 
