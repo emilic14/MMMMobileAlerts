@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node
 COPY ../maserver /maserver
 RUN apk update &&\
     apk upgrade &&\
