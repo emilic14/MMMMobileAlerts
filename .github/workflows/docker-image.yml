@@ -14,16 +14,13 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
     permissions:
       contents: read
       packages: write
 
 
     steps:
-    
-    with:
-      platforms: linux/arm64
     
     - uses: actions/checkout@v3
     - name: MATest
