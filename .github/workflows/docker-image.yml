@@ -26,11 +26,11 @@ jobs:
       uses: docker/setup-buildx-action@v1
     
     - uses: actions/checkout@v3
-    - name: MATest
+#    - name: MATest
       #build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           # linux/amd64,linux/arm/v7,
-      working-directory: 
-      run: docker build . --file Dockerfile --tag matest01:$(date +%s)
+#      working-directory: 
+#      run: docker build . --file Dockerfile --tag matest01:$(date +%s)
       
       
     - name: Log in to the Container registry
