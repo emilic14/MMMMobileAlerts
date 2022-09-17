@@ -31,7 +31,10 @@ jobs:
           # linux/amd64,linux/arm/v7,
 #      working-directory: 
 #      run: docker build . --file Dockerfile --tag matest01:$(date +%s)
-      
+    
+    - uses: actions/setup-node@v2
+      with:
+      node-version: '14'
       
     - name: Log in to the Container registry
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
