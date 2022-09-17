@@ -2,6 +2,10 @@
 
 Documentation about the protocols of ELV Mobile Alerts sensors plus a node MQTT gateway
 
+NOTE:
+Modified this mobile alerts to create a docker package for my home assistant docker container distribution being run in an arm64v8 machine.
+It has not been optimized so its quite big but it works.
+
 # Mobile Alerts
 
 This document tries to describe every detail of the Mobile Alerts sensors, which are sold by [ELV](https://www.elv.de/ip-wettersensoren-system.html) in Germany, but are also available at the common suspects (Amazon, etc). Be careful buying at Amazon: certain sensors mention Mobile Alerts, but seem to be designed for the US. They are _not_ compatible with the ELV Mobile Alerts ones!
